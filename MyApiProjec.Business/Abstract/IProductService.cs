@@ -9,5 +9,6 @@ namespace MyApiProjec.Business.Abstract
 {
     public interface IProductService:IGenericService<Product>
     {
+        public int TGetProductCount();
     }
 }

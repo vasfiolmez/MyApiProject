@@ -1,0 +1,19 @@
+﻿@model List<MyApiProject.WebUI.Dtos.ResultCategoryDto>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CategoryList</title>
+</head>
+<body>
+    @foreach(var item in Model)
+    {
+        <p>@item.CategoryName</p>
+    }
+</body>
+</html>

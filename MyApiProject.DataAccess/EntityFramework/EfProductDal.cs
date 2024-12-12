@@ -12,8 +12,15 @@ namespace MyApiProject.DataAccess.EntityFramework
 {
     public class EfProductDal : GenericRepository<Product>,IProductDal
     {
+        private readonly ApiContext _context;
         public EfProductDal(ApiContext context) : base(context)
         {
+            _context = context;
+        }
+
+        public int GetProductCount()
+        {
+            return _context.Products.Count();
         }
     }
 }
