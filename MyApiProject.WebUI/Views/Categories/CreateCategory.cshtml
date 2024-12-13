@@ -1,0 +1,30 @@
+﻿@model MyApiProject.WebUI.Dtos.CreateCategoryDto
+@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CreateCategory</title>
+</head>
+<body>
+    <form method="post">
+
+        <div class="container">
+            <br />
+            <br />
+            <label>Kategori Adı</label>
+            <input type="text" asp-for="CategoryName" class="form-control" />
+            <br />
+            <button class="btn btn-primary">Kategoriyi ekle</button>
+        </div>
+    </form>
+</body>
+</html>
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />

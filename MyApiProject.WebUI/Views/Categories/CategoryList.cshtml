@@ -5,15 +5,30 @@
 
 <!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>CategoryList</title>
-</head>
-<body>
-    @foreach(var item in Model)
-    {
-        <p>@item.CategoryName</p>
-    }
-</body>
-</html>
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<div class="container">
+
+    <br />
+    <br />
+
+    <table class="table table-hover">
+        <tr>
+            <td>#</td>
+            <td>Kategori Adı</td>
+            <td>Sil</td>
+            <td>Güncelle</td>
+           
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CategoryId</td>
+                <td>@item.CategoryName</td>
+                <td> <a href="/Categories/DeleteCategory/@item.CategoryId" class="btn btn-danger">sil</a></td>
+                <td> <a href="/Categories/UpdateCategory/@item.CategoryId" class="btn btn-success">güncelle</a></td>
+            </tr>
+        }
+    </table>
+    <a href="/Categories/CreateCategory/" class="btn btn-primary">Yeni Kategori Girişi</a>
+</div>

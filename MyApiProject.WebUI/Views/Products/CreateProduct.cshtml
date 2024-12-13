@@ -1,0 +1,36 @@
+﻿@model MyApiProject.WebUI.Dtos.CreateProductDto
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CreateProduct</title>
+</head>
+<body>
+    <form method="post">
+
+        <div class="container">
+            <br />
+            <br />
+            <label>Ürün Adı</label>
+            <input type="text" asp-for="Name" class="form-control" />
+            <br />
+            <label>Fiyat</label>
+            <input type="text" asp-for="ProductDecimal" class="form-control" />
+            <br />
+            <label>Stok</label>
+            <input type="text" asp-for="ProductStock" class="form-control" />
+            <br />
+
+            <button class="btn btn-primary">Ürünü Ekle</button>
+        </div>
+    </form>
+</body>
+</html>
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
